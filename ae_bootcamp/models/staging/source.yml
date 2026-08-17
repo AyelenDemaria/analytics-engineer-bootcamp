@@ -1,0 +1,26 @@
+version: 2
+sources:
+  - name: northwind
+    schema: dl_vientodelnorte
+    tables:
+    - name: customer
+    - name: employee_privileges
+    - name: employees 
+    - name: inventory_transaction_types
+    - name: inventory_transactions
+    - name: invoices 
+    - name: order_details
+    - name: order_details_status
+    - name: orders 
+    - name: order_status 
+    - name: order_tax_status 
+    - name: privileges 
+    - name: products 
+    - name: purchase_order_details
+    - name: purchase_order_status 
+    - name: purchase_orders 
+    - name: sales_reports
+    - name: shippers
+    - name: strings 
+    - name: suppliers
+
