@@ -18,14 +18,13 @@ select
     web_page,
     notes,
     attachments,
-    ingestion_timestamp
+    current_timestamp () as insertion_timestamp,
 from {{ ref('stg_customer')}}
 ),
 unique_source as (
     select *,
     row_number() over (
-        partition by customer_id
-        order by ingestion_timestamp desc) as row_number
+        partition by customer_id) as row_number
     from source
 )
 select * except (row_number)
