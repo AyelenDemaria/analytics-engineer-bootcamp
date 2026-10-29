@@ -42,6 +42,20 @@ Exportaciones CSV (OLTP)
 - **Columnas de auditoría:** `ingestion_timestamp` (staging) e `insertion_timestamp` (warehouse y OBT).
 - **Un schema por capa**, configurado con `+schema` en `dbt_project.yml`.
 
+
+## Modelo dimensional
+
+El modelo se diseñó en tres niveles: conceptual, lógico y físico.
+
+**Conceptual:** qué hechos y dimensiones existen y cómo se relacionan.
+![Modelo conceptual](docs/modelo-conceptual.png)
+
+**Lógico:** atributos de cada tabla.
+![Modelo lógico](docs/modelo-logico.png)
+
+**Físico:** claves, relaciones y tipos de dato.
+![Modelo físico](docs/modelo-fisico.png)
+
 ## Calidad de datos
 
 Tests `not_null` y `unique` sobre las claves de las dimensiones (`models/warehouse/schema.yml`). Se ejecutan con:
