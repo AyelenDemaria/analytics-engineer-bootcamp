@@ -8,7 +8,7 @@ with source as (
         c.business_phone    as customer_business_phone,
         c.home_phone        as customer_home_phone,
         c.mobile_phone      as customer_mobile_phone,
-        c.fax_number        as customer,
+        c.fax_number        as customer_fax_number,
         c.address           as customer_address,
         c.city              as customer_city,
         c.state_province    as customer_state_province,
